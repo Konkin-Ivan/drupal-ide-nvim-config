@@ -1,6 +1,4 @@
 " Conquer of completion configuration.
-"
-" @author Maciej Bedra
 
 " Do not pass messages to ins-completion-menu
 set shortmess+=c

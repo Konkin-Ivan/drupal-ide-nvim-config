@@ -1,6 +1,4 @@
 " Conquer of completion extensions.
-"
-" @author Maciej Bedra
 
 " Globally available extensions
 let g:coc_global_extensions = [
