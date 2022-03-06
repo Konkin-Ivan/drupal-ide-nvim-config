@@ -26,7 +26,7 @@ set autoindent                                  " Copies indent from current lin
 set smartindent                                 " Copies indent from current line to next line
 set guifont=Monaco:h16                          " Default font settings
 set background=dark                             " Defaults to dark background
-set spell spelllang=ru,en       		" Включить проверку орфографии
+" set spell spelllang=ru,en       		" Включить проверку орфографии
 set termguicolors
 set foldmethod=marker
 set exrc
@@ -35,8 +35,22 @@ set enc=utf-8	" utf-8 by default in files
 set ls=2	" show status bar always
 set hlsearch	" highlight search
 set showtabline=0
+set clipboard+=unnamedplus			" Копия попадает в буфер обмена
 
-let g:neomake_php_phpcs_args_standard = 'Drupal'
+let g:UltiSnipsSnippetDirectories=["UltiSnips", "my_snippets"]
+let g:pdv_template_dir = $HOME ."/.config/nvim/my_snippets"
+nnoremap <buffer> <C-p> :call pdv#DocumentWithSnip()<CR>
+
+" Ctrl+hjkl для пререкл.чения между сплитами
+map <C-k> <C-w><Up>
+map <C-j> <C-w><Down>
+map <C-l> <C-w><Right>
+map <C-h> <C-w><Left>
+
+" Включить горячие клавиши для русской раскладки
+set langmap=ФИСВУАПРШОЛДЬТЩЗЙКЫЕГМЦЧНЯ;ABCDEFGHIJKLMNOPQRSTUVWXYZ,фисвуапршолдьтщзйкыегмцчня;abcdefghijklmnopqrstuvwxyz
+
+iabbrev <expr> cdate strftime('%Y-%m-%d') "current date
 
 "" Copy/Paste/Cut
 if has('unnamedplus')

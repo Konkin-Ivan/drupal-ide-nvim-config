@@ -7,11 +7,13 @@
 
 sudo apt install exuberant-ctags
 
+sudo apt install universal-ctags
+
 composer global require squizlabs/php_codesniffer
 
 composer global require drupal/coder
 
-sudo apt install universal-ctags
+phpcs --config-set installed_paths ~/.config/composer/vendor/drupal/coder/coder_sniffer подробнее здесь: https://github.com/pfrenssen/coder
 
 Установка:
 1. Клонировать репозиторий таким образом, чтобы файлы находились в: ~/home/ USER NAME /.config/nvim

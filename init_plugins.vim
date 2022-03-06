@@ -10,8 +10,9 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Navigation
 Plug 'scrooloose/nerdtree'		" NERD Tree
 Plug 'mhinz/vim-startify'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'kien/ctrlp.vim'
 
 " Coc
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " Completion as in vscode
@@ -26,6 +27,12 @@ Plug 'w0rp/ale'				" Асинхронный Lint Engine
 " PHP
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'phpactor/phpactor', {'for': 'php', 'tag': '*', 'do': 'composer install --no-dev -o'}
+" Require ncm2 and this plugin
+Plug 'ncm2/ncm2'
+Plug 'roxma/nvim-yarp'
+Plug 'phpactor/ncm2-phpactor'
+Plug 'adoy/vim-php-refactoring-toolbox'
+Plug 'tobyS/pdv'
 
 " Symfony
 Plug 'symfony/symfony'
@@ -40,9 +47,12 @@ Plug 'noahfrederick/vim-composer'
 Plug 'grota/drupal.vim'
 Plug 'majutsushi/tagbar'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'stephpy/vim-php-cs-fixer'
 
 " compiler
 Plug 'neomake/neomake'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 " Syntax highlighting
 Plug 'vim-scripts/vim-autoprefixer'
@@ -54,16 +64,19 @@ Plug 'prettier/vim-prettier'
 Plug 'othree/xml.vim'
 Plug 'othree/html5.vim'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'groenewege/vim-less'
 Plug 'tpope/vim-surround'
 Plug 'prettier/vim-prettier'
 Plug 'mattn/emmet-vim' " already in coc
 Plug 'AndrewRadev/splitjoin.vim'		" Разделить массивы в PHP / struct в Go / прочее
+Plug 'jiangmiao/auto-pairs' " Автозакрывает кавычки, помещая курсор между ними
 
 " Theme
 Plug 'tomasr/molokai'			" sublime theme
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'fxn/vim-monochrome'
 
 " GIT
 Plug 'tpope/vim-fugitive'
