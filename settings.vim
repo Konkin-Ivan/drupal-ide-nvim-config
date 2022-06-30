@@ -73,6 +73,9 @@ let g:gitgutter_preview_win_floating = 1
 let g:vimtex_compiler_latexmk = {'callback': 0}
 let g:gitgutter_async = 0
 
+"=============Ctags
+let g:easytags_cmd = '/usr/local/bin/ctags'
+
 " Enable omni completion.
 augroup onmicompletion
   au! FileType css setlocal omnifunc=csscomplete#CompleteCSS
@@ -103,7 +106,3 @@ augroup END
 augroup removetrailingspace
   au! BufWritePre * :%s/\s\+$//e
 augroup END
-
-" NERT Tree {{{
-map <F3> :NERDTreeToggle<CR>
-" }}}
