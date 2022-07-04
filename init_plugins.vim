@@ -11,10 +11,13 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 " PHP
 Plug 'StanAngeloff/php.vim', {'for': 'php'}
 Plug 'vim-vdebug/vdebug'
+Plug 'https://git.drupalcode.org/project/vimrc.git', { 'branch': '8.x-1.x', 'rtp': 'bundle/vim-plugin-for-drupal' }
 
 " Include Phpactor
 Plug 'phpactor/phpactor' ,  {'do': 'composer install', 'for': 'php'}
@@ -57,7 +60,8 @@ Plug 'prettier/vim-prettier'
 Plug 'othree/xml.vim'
 Plug 'othree/html5.vim'
 Plug 'tpope/vim-surround'
-Plug 'jiangmiao/auto-pairs' " Автозакрывает кавычки, помещая курсор между ними
+"Plug 'jiangmiao/auto-pairs' " Автозакрывает кавычки, помещая курсор между ними
+Plug 'windwp/nvim-autopairs'
 
 " Theme
 Plug 'tomasr/molokai'			" sublime theme
